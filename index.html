@@ -8,18 +8,18 @@
 </head>
 <body>
     <!--aka title bar-->
-    <div class="top-bar">
-        <div class="left-section"> <!--where the app icon and title are-->
-          <img src="assets/angel2.png" class="app-icon" />
-          <span class="app-title">Angel’s To-do App</span>
-        </div>
-        <div class="right-section"> <!--where the minimize/close buttons are-->
-            <img src="assets/Property 1=Default.png" class="window-btn minimize-btn" />
-            <img src="assets/closenormal.png" class="window-btn close-btn" />
-          </div>          
-      </div>
+<div class="top-bar">
+    <div class="left-section"> <!--where the app icon and title are-->
+      <img src="assets/angel2.png" class="app-icon" />
+      <span class="app-title">Angel’s To-do App</span>
+    </div>
+       <div class="right-section"> <!--where the minimize/close buttons are-->
+       <img src="assets/Property 1=Default.png" class="window-btn minimize-btn" />
+        <img src="assets/closenormal.png" class="window-btn close-btn" />
+        </div>          
+</div>
       
-  <div class="app-container"> <!--our main container-->
+  <div class="app-container"> <!-- main container-->
     <img src="assets/angelheart.png" class="angelheart" />
     <h2 class="welcome-text">Welcome</h2>
 
@@ -41,7 +41,9 @@
         <div class="todoicon"><img src="assets/listpixel.png" /></div>
         <h2 class="todo-title">To-do list</h2>
       </div>
-      <ul id="task-list" class="task-list"></ul>
+      <div class="task-wrapper">
+        <ul id="task-list" class="task-list"></ul>
+      </div>      
       <div class="add-button" id="add-task"><img src="assets/addtask.png" /></div>
     </div>
   </div>  
@@ -51,8 +53,12 @@
       <h3 id="modal-title">Add Task</h3>
       <input type="text" id="task-input" maxlength="100" />
       <div class="modal-buttons">
-        <button id="save-task">Save</button>
-        <button id="cancel-task">Cancel</button>
+        <button id="save-task">
+            <img id="save-icon" src="assets/savenormal.png" alt="Save" class="btn-icon">
+          </button>
+          <button id="cancel-task">
+            <img id="cancel-icon" src="assets/cancelnormal.png" alt="Cancel" class="btn-icon">
+          </button>
       </div>
     </div>
 </div>
@@ -61,13 +67,32 @@
     <div class="modal-content">
       <h3>Are you sure? An angel will lose its wing :C</h3> <!--*cringe*-->
       <div class="modal-buttons">
-        <button id="confirm-delete">Yes, delete --'</button>
-        <button id="cancel-delete">Cancel</button>
-      </div>
+        <button id="confirm-delete">
+            <img id="confirm-delete-icon" src="assets/yesnormal.png" alt="Delete" class="btn-icon">
+          </button>
+          <button id="cancel-delete">
+            <img id="cancel-delete-icon" src="assets/cancelnormal.png" alt="Cancel" class="btn-icon">
+          </button>
+      </div>      
     </div>
   </div>
-
+<!-- view taaaaask, almost forgto about this, btu if a task is too long this is teh only way to view the rest of it-->
+<div id="view-task-modal" class="modal">
+    <div class="modal-content">
+      <h3>Task Details</h3>
+      <p id="full-task"></p>
+      <div class="modal-buttons">
+        <button id="close-view-task">
+            <img id="close-task-icon" src="assets/closebtnnormal.png" alt="Close" class="btn-icon">
+          </button>
+      </div>
+      
+    </div>
+  </div>
+<div class="credit">
+    ©kenza      
+  </div>  
 <script src="renderer.js"></script>
-  
+
 </body>
 </html>
