@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <strong>Click the image above to download!</strong>
+  <strong>Click the button above to download!</strong>
 </p>
 
 ## Demo
